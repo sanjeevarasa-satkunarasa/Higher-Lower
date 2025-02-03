@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 📈 Higher/Lower 📉</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div id="startScreenDiv" style="display: block;">
+        <h1>📈 Higher/Lower 📉</h1>
+        <h2>Information:</h2>
+        <p> The goal of the game is for you to get closest to the number, you won't get to know the number, but you will get to know if you have to go higher or lower</p>
+        <button onclick="startGame()" title="Click to start game"> Start Game</button> <!--Added title to improve accesibility-->
+    </div>
+    <div id="gameDiv" style="display: none;">
+        <h2>Choose your number</h2>
+        <label>
+            Number: <input type="number" min="0" max="100" placeholder="0" id="guess">
+        </label>
+        <button onclick="submitGuess()" title="submit your guess">Submit</button>
+        <div id="answerBox" style="display: none;">
+            <h3>Your number is</h3>
+            <h3 id="outputGame"></h3>
+            <h3>than the answer </h3>
+        </div>
+    </div>
+    <div id="finishGameDiv" style="display: none;">
+        <h2>You guessed correctly!</h2>
+        <div><iframe src="https://giphy.com/embed/jp7jSyjNNz2ansuOS8"></iframe></div>
+        <h3>The correct number was:</h3>
+        <h3 id="correctAnswer"></h3>
+        <br>
+        <h2>Want to be on the leaderboard?</h2>
+        <label>
+           Submit name: <input type="text" placeholder="name" id="userName">
+        </label>
+        <button onclick="addToLeaderboard()" title="Add your name to the leaderboard">Submit</button>
+        <div id="leaderBoardDivOuter">
+            <p>Username         Guesses</p>
+            <div id="leaderBoardDiv">
+            
+            
+            </div>
+        </div>
+        
+        <button onclick="restartGame()" title="Play again?">Restart</button>
+    </div>
+</body>
+</html>
+<script src="/script/script.js"></script>
