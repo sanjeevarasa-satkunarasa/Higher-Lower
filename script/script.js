@@ -34,7 +34,6 @@ function startGame() {
 function submitGuess() {
     answerBoxEl.style = "display: block"
     guessEl = document.getElementById("guess")
-    randomNumber = 10;
     let guess = Number(guessEl.value)
     console.log(guess)
     if (guess > randomNumber) {
